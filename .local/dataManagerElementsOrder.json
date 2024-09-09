@@ -11,7 +11,14 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "numberId&Sequence_1",
+        "list&Sequence_1",
+        "imageTSE&Sequence_2",
+        "code&Sequence_4",
+        "imageCCSS&Sequence_4",
+        "imageHacienda&Sequence_5"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
