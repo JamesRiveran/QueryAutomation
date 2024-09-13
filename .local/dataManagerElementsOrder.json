@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "aditionalDataTSE&Sequence_2",
+        "inmuebles&Sequence_6",
+        "muebles&Sequence_6",
+        "juridica&Sequence_6",
         "numberId&Sequence_1",
         "list&Sequence_1",
         "imageTSE&Sequence_2",
