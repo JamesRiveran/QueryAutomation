@@ -76,7 +76,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="977.6,26513.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="1011.2,36866.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="numberId" />
       <Variable x:TypeArguments="s:String[]" Name="list" />
@@ -96,12 +96,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="977.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Digite las cédulas que desea consultar separadas por comas" Title="Consulta de Cédulas">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1011.2,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Digite las cédulas que desea consultar separadas por comas" Title="Consulta de Cédulas">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[numberId]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Assign sap:VirtualizedContainerService.HintSize="977.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="1011.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[list]</OutArgument>
       </Assign.To>
@@ -109,39 +109,39 @@
         <InArgument x:TypeArguments="s:String[]">[numberId.Split(","c)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="977.6,26103.2" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[list]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1011.2,36456" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[list]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="944,25914.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="977.6,36267.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[currentItem.Length = 9]" sap:VirtualizedContainerService.HintSize="910.4,25854.4" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[currentItem.Length = 9]" sap:VirtualizedContainerService.HintSize="944,36207.2" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="876.8,25467.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="910.4,35820" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="843.2,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Selecciona una de las siguientes opciones: " OptionsString="TSE;Hacienda;Registro Nacional;CCSS;Proceso Completo" Title="Sistema de Validaciones">
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="876.8,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Selecciona una de las siguientes opciones: " OptionsString="TSE;Hacienda;Registro Nacional;CCSS;Proceso Completo" Title="Sistema de Validaciones">
                     <ui:InputDialog.Result>
                       <OutArgument x:TypeArguments="x:String">[userOption]</OutArgument>
                     </ui:InputDialog.Result>
                   </ui:InputDialog>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[userOption]" sap:VirtualizedContainerService.HintSize="843.2,25080" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-                    <Sequence x:Key="TSE" sap:VirtualizedContainerService.HintSize="624,1279.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[userOption]" sap:VirtualizedContainerService.HintSize="876.8,35432.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                    <Sequence x:Key="TSE" sap:VirtualizedContainerService.HintSize="624,3240.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Tribunal Supremo de Elecciones - Costa Rica - Consultas Nacionales por cédula" sap:VirtualizedContainerService.HintSize="590.4,3180.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="3df2c9a1-f5c7-4d15-a528-2cb9a8b538a0" Version="V2" WindowResize="Maximize">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Tribunal Supremo de Elecciones - Costa Rica - Consultas Nacionales por cédula" sap:VirtualizedContainerService.HintSize="565.6,1259.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="3df2c9a1-f5c7-4d15-a528-2cb9a8b538a0" Version="V2" WindowResize="Maximize">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -237,7 +237,7 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="Hacienda" sap:VirtualizedContainerService.HintSize="483.2,1755.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence x:Key="Hacienda" sap:VirtualizedContainerService.HintSize="483.2,1795.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,7 +315,7 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="CCSS" sap:VirtualizedContainerService.HintSize="483.2,1849.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence x:Key="CCSS" sap:VirtualizedContainerService.HintSize="483.2,1889.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -403,19 +403,19 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="Registro Nacional" sap:VirtualizedContainerService.HintSize="803.2,24776.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <Sequence x:Key="Registro Nacional" sap:VirtualizedContainerService.HintSize="836.8,35129.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sistema de Certificaciones e Informes Digitales del Registro Nacional" sap:VirtualizedContainerService.HintSize="769.6,24716.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V2" WindowResize="Maximize">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sistema de Certificaciones e Informes Digitales del Registro Nacional" sap:VirtualizedContainerService.HintSize="803.2,35069.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V2" WindowResize="Maximize">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do Registro Nacional" sap:VirtualizedContainerService.HintSize="736,24476.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="Do Registro Nacional" sap:VirtualizedContainerService.HintSize="769.6,34829.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="ui:Image" Name="juridica" />
                                 <Variable x:TypeArguments="ui:Image" Name="muebles" />
@@ -427,7 +427,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="702.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="jamesriveranu@gmail.com" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="736,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="jamesriveranu@gmail.com" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvElementArea="418, 579, 177, 22" CvType="InputBox" DesignTimeRectangle="419, 580, 175, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='inputbox' aaname='' /&gt;" Guid="bd5daa4b-8d3e-4cfc-9c0f-b7500dc6d99f" InformativeScreenshot="e531e0b3ffd2ee47fcb35ac7502dfd96.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -438,7 +438,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="702.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="james2003" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="736,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="james2003" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvElementArea="416, 627, 178, 23" CvType="InputBox" DesignTimeRectangle="419, 629, 175, 20" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT jide6b309:pass'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='inputbox' aaname='' /&gt;" Guid="ec96aaa2-8dc8-4342-8e67-82a7d62c2733" InformativeScreenshot="e53aeb01cc4a717fdfd8b388caf03471.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -449,18 +449,18 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" sap:VirtualizedContainerService.HintSize="702.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" sap:VirtualizedContainerService.HintSize="736,189.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvTextArea="477, 652, 55, 16" CvTextArgument="Ingresar" CvType="Text" DesignTimeRectangle="478, 648, 56, 21" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Ingresar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='' aaname='Ingresar' check:text='Ingresar' /&gt;" Guid="869ae425-f249-41bf-ac01-1b246401b414" InformativeScreenshot="39082b6708e704f55d4705f0f017ac17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="702.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="736,189.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx" CvElementArea="380, 588, 23, 21" CvTextArea="411, 584, 159, 16" CvTextArgument="Indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="381, 578, 250, 31" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="f63af49f-26ef-4dd9-a574-38f36ae15f14" InformativeScreenshot="221a871de80b5c30350d3c8b723ee22c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="702.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_14" />
-                              <uix:NSelectItem DisplayName="Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="702.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="Bienes Inmuebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="736,122.4" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                              <uix:NSelectItem DisplayName="Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="736,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="Bienes Inmuebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NSelectItem.Items>
                                   <scg:List x:TypeArguments="x:String" Capacity="4">
                                     <x:String>Bienes Inmuebles</x:String>
@@ -479,8 +479,8 @@
                                   </uix:TargetAnchorable>
                                 </uix:NSelectItem.Target>
                               </uix:NSelectItem>
-                              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="702.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_21" />
-                              <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="702.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="736,122.4" sap2010:WorkflowViewState.IdRef="Delay_21" />
+                              <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="736,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NSelectItem.Items>
                                   <scg:List x:TypeArguments="x:String" Capacity="9">
                                     <x:String>Nombre</x:String>
@@ -504,8 +504,8 @@
                                   </uix:TargetAnchorable>
                                 </uix:NSelectItem.Target>
                               </uix:NSelectItem>
-                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="702.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_16" />
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="702.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="736,122.4" sap2010:WorkflowViewState.IdRef="Delay_16" />
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="736,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="857, 558, 185, 28" CvType="InputBox" DesignTimeRectangle="860, 559, 180, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="bbc8a964-b199-464d-bd84-7ab296e0cff3" InformativeScreenshot="7dfca36729461b1f3f7dea2e3e35bfeb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -516,7 +516,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Private: Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="702.4,231.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Private: Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="736,231.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
                                 <uix:NKeyboardShortcuts.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="918, 382, 92, 15" CvType="InputBox" DesignTimeRectangle="920, 382, 90, 13" DesignTimeScaleFactor="0.625" ElementType="InputBox" FriendlyName="'107520808'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="debe3d79-298e-4a54-b34a-58d88795dc13" InformativeScreenshot="d1fb7610827b44fbf2a9096c3eb43041.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -527,33 +527,33 @@
                                   </uix:TargetAnchorable>
                                 </uix:NKeyboardShortcuts.Target>
                               </uix:NKeyboardShortcuts>
-                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="702.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_17" />
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="702.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="736,122.4" sap2010:WorkflowViewState.IdRef="Delay_17" />
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="736,189.6" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 640, 73, 23" CvTextArea="1062, 645, 45, 11" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 640, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="46f8b0f5-c068-4c29-9aca-ca1c73510e4e" InformativeScreenshot="ec5ff3f256e3cc89bafb93bdfdc16ef8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="702.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_26" />
-                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="702.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_13" OutImage="[inmuebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="736,122.4" sap2010:WorkflowViewState.IdRef="Delay_26" />
+                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="736,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_13" OutImage="[inmuebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NTakeScreenshot.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 402" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="6be01464-f7c3-48bb-a3f2-329ced73c1f2" ImageBase64="" InformativeScreenshot="04b4184c0f8a1a4fd9a9468a7578e6ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                 </uix:NTakeScreenshot.Target>
                               </uix:NTakeScreenshot>
-                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNInmuebles_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="702.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_12" Image="[inmuebles]" />
-                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="702.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="La persona posee Bienes Inmuebles" OptionsString="SI;NO" Title="Validacion de Bienes Inmuebles">
+                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNInmuebles_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="736,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_12" Image="[inmuebles]" />
+                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="736,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="La persona posee Bienes Inmuebles" OptionsString="SI;NO" Title="Validacion de Bienes Inmuebles">
                                 <ui:InputDialog.Result>
                                   <OutArgument x:TypeArguments="x:String">[optionInmuebles]</OutArgument>
                                 </ui:InputDialog.Result>
                               </ui:InputDialog>
-                              <If Condition="[optionInmuebles.Equals(&quot;SI&quot;)]" sap:VirtualizedContainerService.HintSize="702.4,21164" sap2010:WorkflowViewState.IdRef="If_8">
+                              <If Condition="[optionInmuebles.Equals(&quot;SI&quot;)]" sap:VirtualizedContainerService.HintSize="736,31516.8" sap2010:WorkflowViewState.IdRef="If_8">
                                 <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="635.2,10682.4" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="668.8,14132.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="601.6,10622.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="635.2,14072.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="firstPartID" />
                                         <Variable x:TypeArguments="x:String" Name="secondPartID" />
@@ -564,7 +564,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="568,2780.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[optionInmuebles.Equals(&quot;SI&quot;)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="601.6,2780.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                                         <ui:InterruptibleDoWhile.Body>
                                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500.8,2634.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -673,22 +673,19 @@
                                             </Sequence>
                                           </Sequence>
                                         </ui:InterruptibleDoWhile.Body>
-                                        <ui:InterruptibleDoWhile.Condition>
-                                          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="optionInmuebles.Equals(&quot;SI&quot;)" />
-                                        </ui:InterruptibleDoWhile.Condition>
                                       </ui:InterruptibleDoWhile>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="568,7758.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="601.6,11208.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="568,189.6" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/RespConsultaNumeroFinca.jspx" CvElementArea="572, 536, 16, 16" CvTextArea="594, 532, 107, 13" CvTextArgument="indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="574, 529, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="98fca835-899f-42cb-a743-2eaacf572805" InformativeScreenshot="6e3c0392ec972b520e9ad81aec0c8b9b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                           </uix:NClick.Target>
                                         </uix:NClick>
-                                        <uix:NSelectItem DelayAfter="1" DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="Bienes Muebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                        <uix:NSelectItem DelayAfter="1" DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="568,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="Bienes Muebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                           <uix:NSelectItem.Items>
                                             <scg:List x:TypeArguments="x:String" Capacity="4">
                                               <x:String>Bienes Inmuebles</x:String>
@@ -707,8 +704,8 @@
                                             </uix:TargetAnchorable>
                                           </uix:NSelectItem.Target>
                                         </uix:NSelectItem>
-                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_22" />
-                                        <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_21" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="568,122.4" sap2010:WorkflowViewState.IdRef="Delay_22" />
+                                        <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="568,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_21" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                           <uix:NSelectItem.Items>
                                             <scg:List x:TypeArguments="x:String" Capacity="7">
                                               <x:String>Nombre</x:String>
@@ -730,8 +727,8 @@
                                             </uix:TargetAnchorable>
                                           </uix:NSelectItem.Target>
                                         </uix:NSelectItem>
-                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_37" />
-                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="568,122.4" sap2010:WorkflowViewState.IdRef="Delay_37" />
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="568,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="901, 442, 129, 19" CvType="InputBox" DesignTimeRectangle="903, 443, 126, 17" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="fc625603-7110-42d3-a518-e06d2de1df47" InformativeScreenshot="21ca3d78d76f2efadeb19b99a313cf66.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                               <uix:TargetAnchorable.Anchors>
@@ -742,26 +739,26 @@
                                             </uix:TargetAnchorable>
                                           </uix:NTypeInto.Target>
                                         </uix:NTypeInto>
-                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="534.4,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_38" />
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="568,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="568,122.4" sap2010:WorkflowViewState.IdRef="Delay_38" />
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="568,189.6" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 639, 73, 23" CvTextArea="1062, 645, 45, 12" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 640, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="da5887a6-48e9-4636-a7b3-4b68577590ae" InformativeScreenshot="25a70c4463d45d430a04d22974a954a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                           </uix:NClick.Target>
                                         </uix:NClick>
-                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
-                                        <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="534.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_14" OutImage="[muebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                        <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="568,122.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
+                                        <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="568,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_14" OutImage="[muebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                           <uix:NTakeScreenshot.Target>
                                             <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 413" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="feceae4c-01ba-4a93-842b-470ffe1ae41d" ImageBase64="" InformativeScreenshot="f998e5ef0df36352776652e73073c472.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                           </uix:NTakeScreenshot.Target>
                                         </uix:NTakeScreenshot>
-                                        <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNMuebles_&quot;+currentItem+&quot;(&quot;+counterMuebles.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="534.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_13" Image="[muebles]" />
-                                        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="La persona posee Bienes Muebles" OptionsString="SI;NO" Title="Validacion de Bienes Muebles">
+                                        <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNMuebles_&quot;+currentItem+&quot;(&quot;+counterMuebles.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="568,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_13" Image="[muebles]" />
+                                        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="568,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="La persona posee Bienes Muebles" OptionsString="SI;NO" Title="Validacion de Bienes Muebles">
                                           <ui:InputDialog.Result>
                                             <OutArgument x:TypeArguments="x:String">[moreMuebles]</OutArgument>
                                           </ui:InputDialog.Result>
                                         </ui:InputDialog>
-                                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="534.4,2970.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[moreMuebles.Equals(&quot;SI&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="568,2970.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                                           <ui:InterruptibleWhile.Body>
                                             <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500.8,2824" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -895,22 +892,22 @@
                                               </Sequence>
                                             </Sequence>
                                           </ui:InterruptibleWhile.Body>
-                                          <ui:InterruptibleWhile.Condition>
-                                            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="moreMuebles.Equals(&quot;SI&quot;)" />
-                                          </ui:InterruptibleWhile.Condition>
                                         </ui:InterruptibleWhile>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="534.4,2287.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="568,5737.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="moreJuridica" />
+                                          </Sequence.Variables>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_64" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_64" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx" CvElementArea="572, 536, 16, 16" CvTextArea="594, 532, 107, 13" CvTextArgument="indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="574, 529, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="e420446e-cc9c-40e5-9b05-35a9aee09594" InformativeScreenshot="7a856152548cee0c7aa0367ae06395b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                             </uix:NClick.Target>
                                           </uix:NClick>
-                                          <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_14" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                          <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_14" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                             <uix:NSelectItem.Items>
                                               <scg:List x:TypeArguments="x:String" Capacity="4">
                                                 <x:String>Bienes Inmuebles</x:String>
@@ -922,15 +919,15 @@
                                             <uix:NSelectItem.Target>
                                               <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvTextArea="942, 411, 86, 11" CvTextArgument="Personas Juridicas" CvType="Text" DesignTimeRectangle="938, 410, 114, 15" DesignTimeScaleFactor="0.8333333134651184" ElementType="DropDown" FriendlyName="'Personas Jurídicas'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='inputbox' aaname='' /&gt;" Guid="27bf06b8-5878-483a-9dea-6fa1916120af" InformativeScreenshot="304e9646009a751b986abf7c584d7203.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                                 <uix:TargetAnchorable.Anchors>
-                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                     <uix:Target CvTextArea="792, 414, 43, 11" CvTextArgument="Registro:" CvType="Text" DesignTimeRectangle="792, 410, 48, 16" ElementType="Text" FriendlyName="'Registro'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Registro: ' check:innerText='Registro:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                                   </scg:List>
                                                 </uix:TargetAnchorable.Anchors>
                                               </uix:TargetAnchorable>
                                             </uix:NSelectItem.Target>
                                           </uix:NSelectItem>
-                                          <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_24" />
-                                          <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_15" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                          <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_24" />
+                                          <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_15" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                             <uix:NSelectItem.Items>
                                               <scg:List x:TypeArguments="x:String" Capacity="42">
                                                 <x:String>Nombre</x:String>
@@ -987,8 +984,8 @@
                                               </uix:TargetAnchorable>
                                             </uix:NSelectItem.Target>
                                           </uix:NSelectItem>
-                                          <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_18" />
-                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                                          <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_18" />
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                             <uix:NTypeInto.Target>
                                               <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="858, 636, 184, 27" CvType="InputBox" DesignTimeRectangle="860, 637, 180, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'901210157'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="9f7f6f34-2021-4083-9a7e-d38370c5cf8b" InformativeScreenshot="75a93ac967ae9c3163c917051d76ad47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                 <uix:TargetAnchorable.Anchors>
@@ -999,40 +996,144 @@
                                               </uix:TargetAnchorable>
                                             </uix:NTypeInto.Target>
                                           </uix:NTypeInto>
-                                          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_19" />
-                                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_20" />
-                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_19" />
+                                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="534.4,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_20" />
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 717, 74, 24" CvTextArea="1062, 722, 45, 12" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 717, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="0f106310-e85d-40dd-b553-f667c7ecae74" InformativeScreenshot="ec5c955d02c03828948cc4c787525be4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                             </uix:NClick.Target>
                                           </uix:NClick>
-                                          <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_27" />
-                                          <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="416,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_15" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                          <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_27" />
+                                          <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="534.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_15" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                             <uix:NTakeScreenshot.Target>
                                               <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 413" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="dd40c439-16ce-4b14-a7c9-edac5f8623d6" ImageBase64="" InformativeScreenshot="087375f63f0b3c9929cc55bbbe9a7833.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                             </uix:NTakeScreenshot.Target>
                                           </uix:NTakeScreenshot>
-                                          <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="SaveImage_14" Image="[juridica]" />
+                                          <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="534.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_14" Image="[juridica]" />
+                                          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_17" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                            <ui:InputDialog.Result>
+                                              <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                            </ui:InputDialog.Result>
+                                          </ui:InputDialog>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="534.4,3114.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="500.8,2917.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                              <ui:InterruptibleWhile.Body>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,2771.2" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="idJuridica" />
+                                                    <Variable x:TypeArguments="x:String" Name="firstJuridica" />
+                                                    <Variable x:TypeArguments="x:String" Name="secondJuridica" />
+                                                    <Variable x:TypeArguments="x:String" Name="thirdJuridica" />
+                                                    <Variable x:TypeArguments="ui:Image" Name="juridicaData" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultas Gratuitas'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_68" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="583, 431, 17, 16" CvTextArea="604, 431, 89, 10" CvTextArgument="Consultas Gratuitas" CvType="ArrowButton" DesignTimeRectangle="585, 425, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consultas Gratuitas'" FullSelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' type='' class='' check:innerText='Consultas Gratuitas' /&gt;" Guid="a04de9f8-6343-4d76-b545-365b6401f2b8" InformativeScreenshot="d1d487ea73e0d7181dd196498cf0581d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consulta por'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_69" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/indiceDocumentos.jspx" CvTextArea="806, 829, 118, 10" CvTextArgument="Consolta por Cedub Junidiea" CvType="Text" DesignTimeRectangle="807, 829, 118, 10" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consulta por'" FullSelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' type='' class='' check:innerText='Consulta por Cédula Jurídica' /&gt;" Guid="fa22d69d-0152-4d4e-9e49-c318927a594c" InformativeScreenshot="c2e75d162748bc1aaf7d5fc297f6fb9d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_18" IsPassword="False" Label="Ingrese el número de cédula jurídica de la persona" Title="Cédula Jurídica">
+                                                    <ui:InputDialog.Result>
+                                                      <OutArgument x:TypeArguments="x:String">[idJuridica]</OutArgument>
+                                                    </ui:InputDialog.Result>
+                                                  </ui:InputDialog>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[firstJuridica]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[idJuridica.Substring(0,1)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[secondJuridica]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[idJuridica.Substring(1,1)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[thirdJuridica]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[idJuridica.Substring(2)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula Jurídica'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_32" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[firstJuridica + &quot;[k(tab)]&quot; + secondJuridica + &quot;[k(tab)]&quot; + thirdJuridica]" Version="V3">
+                                                    <uix:NTypeInto.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvElementArea="897, 385, 40, 20" CvType="InputBox" DesignTimeRectangle="899, 386, 36, 17" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'3'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="a123b20d-0513-4972-9fe2-f3e19e520024" InformativeScreenshot="63534aff6d97236d416438f13846f6f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                            <uix:Target CvTextArea="819, 390, 76, 11" CvTextArgument="Cedula Juridica:" CvType="Text" DesignTimeRectangle="817, 387, 81, 16" ElementType="Text" FriendlyName="'Cédula Jurídica'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Cédula Jurídica:' check:innerText='Cédula Jurídica:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NTypeInto.Target>
+                                                  </uix:NTypeInto>
+                                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_64" />
+                                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="433.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_17" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_65" />
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_70" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvTextArea="1031, 430, 42, 10" CvTextArgument="Consultar" CvType="Text" DesignTimeRectangle="1030, 428, 48, 14" DesignTimeScaleFactor="0.8333333134651184" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' type='' class='' /&gt;" Guid="076db607-d75e-44cb-8a5a-7cefd0fa8e80" InformativeScreenshot="4c25efe69c49af33c81b4630db0f5ffc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_66" />
+                                                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'grecaptcha.ready(functi…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="433.6,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_33" OutImage="[juridicaData]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                    <uix:NTakeScreenshot.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" DesignTimeRectangle="767, 330, 573, 221" DesignTimeScaleFactor="0.8333333134651184" FriendlyName="'grecaptcha.ready(functi…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Consulta de Personas Jurídicas por Identificación&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Permite realizar una consulta por la' /&gt;" Guid="e28a637e-02e1-4749-9a12-2f8c6f95851e" ImageBase64="" InformativeScreenshot="2b0608e98b98b0b7759b28ece8d93922.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                    </uix:NTakeScreenshot.Target>
+                                                  </uix:NTakeScreenshot>
+                                                  <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\DetailsJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_31" Image="[juridicaData]" />
+                                                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,318.4" sap2010:WorkflowViewState.IdRef="InputDialog_19" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                                    <ui:InputDialog.Result>
+                                                      <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                                    </ui:InputDialog.Result>
+                                                  </ui:InputDialog>
+                                                </Sequence>
+                                              </ui:InterruptibleWhile.Body>
+                                              <ui:InterruptibleWhile.Condition>
+                                                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="moreJuridica.Equals(&quot;SI&quot;)" />
+                                              </ui:InterruptibleWhile.Condition>
+                                            </ui:InterruptibleWhile>
+                                            <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="500.8,113.6" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Proceso completado y finalizado" />
+                                          </Sequence>
                                         </Sequence>
                                       </Sequence>
                                     </Sequence>
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="668.8,10320" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="702.4,17220.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="635.2,10260" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="668.8,17160.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NSelectItem DelayAfter="1" DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="601.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_25" Item="Bienes Muebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                      <uix:NSelectItem DelayAfter="1" DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="635.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_25" Item="Bienes Muebles" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                         <uix:NSelectItem.Items>
                                           <scg:List x:TypeArguments="x:String" Capacity="4">
                                             <x:String>Bienes Inmuebles</x:String>
@@ -1051,8 +1152,8 @@
                                           </uix:TargetAnchorable>
                                         </uix:NSelectItem.Target>
                                       </uix:NSelectItem>
-                                      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="601.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_49" />
-                                      <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="601.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_29" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_49" />
+                                      <uix:NSelectItem DisplayName="Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="635.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_29" Item="Persona Física por Cédula Identidad" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                         <uix:NSelectItem.Items>
                                           <scg:List x:TypeArguments="x:String" Capacity="7">
                                             <x:String>Nombre</x:String>
@@ -1067,54 +1168,54 @@
                                         <uix:NSelectItem.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvTextArea="852, 429, 36, 10" CvTextArgument="Nombre" CvType="Text" DesignTimeRectangle="849, 426, 292, 15" DesignTimeScaleFactor="0.8333333134651184" ElementType="DropDown" FriendlyName="'Nombre'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='inputbox' aaname='' /&gt;" Guid="4912e48a-c32b-46d0-8a61-87277ec67a5a" InformativeScreenshot="9ebbd535ac137e1c8b05955f266fc8a6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="786, 429, 56, 11" CvTextArgument="Buscar por" CvType="Text" DesignTimeRectangle="786, 425, 60, 16" ElementType="Text" FriendlyName="'Buscar por'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Buscar por:' check:innerText='Buscar por:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
                                           </uix:TargetAnchorable>
                                         </uix:NSelectItem.Target>
                                       </uix:NSelectItem>
-                                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="601.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_57" />
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="601.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_30" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_57" />
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="635.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_30" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="900, 442, 129, 19" CvType="InputBox" DesignTimeRectangle="903, 443, 126, 17" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="5d35535b-0a71-4958-9e1d-5fb2e31ce700" InformativeScreenshot="21ca3d78d76f2efadeb19b99a313cf66.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArea="786, 445, 111, 11" CvTextArgument="Num. de Identificacion:" CvType="Text" DesignTimeRectangle="786, 443, 117, 16" ElementType="Text" FriendlyName="'Num. de Identificación'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Num. de Identificación:' check:innerText='Num. de Identificación:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
                                           </uix:TargetAnchorable>
                                         </uix:NTypeInto.Target>
                                       </uix:NTypeInto>
-                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="601.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_56" />
-                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="601.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="601.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_58" />
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="601.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_57" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_56" />
+                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="635.2,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_58" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="635.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_57" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                         <uix:NClick.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 639, 73, 23" CvTextArea="1062, 645, 45, 12" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 640, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="da5887a6-48e9-4636-a7b3-4b68577590ae" InformativeScreenshot="25a70c4463d45d430a04d22974a954a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
-                                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="601.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_50" />
-                                      <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="601.6,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_29" OutImage="[muebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                      <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_50" />
+                                      <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="635.2,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_29" OutImage="[muebles]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                         <uix:NTakeScreenshot.Target>
                                           <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 413" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="feceae4c-01ba-4a93-842b-470ffe1ae41d" ImageBase64="" InformativeScreenshot="f998e5ef0df36352776652e73073c472.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                         </uix:NTakeScreenshot.Target>
                                       </uix:NTakeScreenshot>
-                                      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNMuebles_&quot;+currentItem+&quot;(&quot;+counterMuebles.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="601.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_27" Image="[muebles]" />
-                                      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="601.6,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_15" IsPassword="False" Label="La persona posee Bienes Muebles" OptionsString="SI;NO" Title="Validacion de Bienes Muebles">
+                                      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNMuebles_&quot;+currentItem+&quot;(&quot;+counterMuebles.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="635.2,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_27" Image="[muebles]" />
+                                      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="635.2,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_15" IsPassword="False" Label="La persona posee Bienes Muebles" OptionsString="SI;NO" Title="Validacion de Bienes Muebles">
                                         <ui:InputDialog.Result>
                                           <OutArgument x:TypeArguments="x:String">[moreMuebles]</OutArgument>
                                         </ui:InputDialog.Result>
                                       </ui:InputDialog>
-                                      <If Condition="[moreMuebles.Equals(&quot;SI&quot;)]" sap:VirtualizedContainerService.HintSize="601.6,7826.4" sap2010:WorkflowViewState.IdRef="If_11">
+                                      <If Condition="[moreMuebles.Equals(&quot;SI&quot;)]" sap:VirtualizedContainerService.HintSize="635.2,14727.2" sap2010:WorkflowViewState.IdRef="If_11">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="568,5317.6" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="601.6,8768" sap2010:WorkflowViewState.IdRef="Sequence_64">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="534.4,2970.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5">
+                                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[moreMuebles.Equals(&quot;SI&quot;)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="568,2970.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5">
                                               <ui:InterruptibleDoWhile.Body>
                                                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500.8,2824" sap2010:WorkflowViewState.IdRef="Sequence_67">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1248,22 +1349,22 @@
                                                   </Sequence>
                                                 </Sequence>
                                               </ui:InterruptibleDoWhile.Body>
-                                              <ui:InterruptibleDoWhile.Condition>
-                                                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="moreMuebles.Equals(&quot;SI&quot;)" />
-                                              </ui:InterruptibleDoWhile.Condition>
                                             </ui:InterruptibleDoWhile>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="534.4,2287.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="568,5737.6" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="moreJuridica" />
+                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/bienesMuebles/GoodFurnitureOfPersonDetail.jspx" CvElementArea="573, 516, 16, 16" CvTextArea="594, 512, 107, 13" CvTextArgument="indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="574, 509, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="3fed7cba-d700-4521-94ff-40b63487d61b" InformativeScreenshot="b1fdaca40b540d16c503825b8e346772.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                 </uix:NClick.Target>
                                               </uix:NClick>
-                                              <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_30" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_30" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NSelectItem.Items>
                                                   <scg:List x:TypeArguments="x:String" Capacity="4">
                                                     <x:String>Bienes Inmuebles</x:String>
@@ -1282,8 +1383,8 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NSelectItem.Target>
                                               </uix:NSelectItem>
-                                              <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_59" />
-                                              <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_31" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_59" />
+                                              <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_31" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NSelectItem.Items>
                                                   <scg:List x:TypeArguments="x:String" Capacity="42">
                                                     <x:String>Nombre</x:String>
@@ -1340,8 +1441,8 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NSelectItem.Target>
                                               </uix:NSelectItem>
-                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_60" />
-                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_60" />
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                                 <uix:NTypeInto.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="858, 636, 184, 27" CvType="InputBox" DesignTimeRectangle="860, 637, 180, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'901210157'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="9f7f6f34-2021-4083-9a7e-d38370c5cf8b" InformativeScreenshot="75a93ac967ae9c3163c917051d76ad47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
@@ -1352,43 +1453,147 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NTypeInto.Target>
                                               </uix:NTypeInto>
-                                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_61" />
-                                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_62" />
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_67" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_61" />
+                                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="534.4,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_62" />
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_67" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 717, 74, 24" CvTextArea="1062, 722, 45, 12" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 717, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="0f106310-e85d-40dd-b553-f667c7ecae74" InformativeScreenshot="ec5c955d02c03828948cc4c787525be4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                 </uix:NClick.Target>
                                               </uix:NClick>
-                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_63" />
-                                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="416,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_32" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_63" />
+                                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="534.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_32" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NTakeScreenshot.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 413" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="dd40c439-16ce-4b14-a7c9-edac5f8623d6" ImageBase64="" InformativeScreenshot="087375f63f0b3c9929cc55bbbe9a7833.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                                 </uix:NTakeScreenshot.Target>
                                               </uix:NTakeScreenshot>
-                                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="SaveImage_30" Image="[juridica]" />
+                                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="534.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_30" Image="[juridica]" />
+                                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_20" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                                <ui:InputDialog.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                                </ui:InputDialog.Result>
+                                              </ui:InputDialog>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="534.4,3114.4" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[moreJuridica.Equals(&quot;SI&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="500.8,2917.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+                                                  <ui:InterruptibleWhile.Body>
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,2771.2" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                      <Sequence.Variables>
+                                                        <Variable x:TypeArguments="x:String" Name="idJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="firstJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="secondJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="thirdJuridica" />
+                                                        <Variable x:TypeArguments="ui:Image" Name="juridicaData" />
+                                                      </Sequence.Variables>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultas Gratuitas'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_71" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="583, 431, 17, 16" CvTextArea="604, 431, 89, 10" CvTextArgument="Consultas Gratuitas" CvType="ArrowButton" DesignTimeRectangle="585, 425, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consultas Gratuitas'" FullSelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' type='' class='' check:innerText='Consultas Gratuitas' /&gt;" Guid="a04de9f8-6343-4d76-b545-365b6401f2b8" InformativeScreenshot="d1d487ea73e0d7181dd196498cf0581d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consulta por'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_72" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/indiceDocumentos.jspx" CvTextArea="806, 829, 118, 10" CvTextArgument="Consolta por Cedub Junidiea" CvType="Text" DesignTimeRectangle="807, 829, 118, 10" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consulta por'" FullSelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' type='' class='' check:innerText='Consulta por Cédula Jurídica' /&gt;" Guid="fa22d69d-0152-4d4e-9e49-c318927a594c" InformativeScreenshot="c2e75d162748bc1aaf7d5fc297f6fb9d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="Ingrese el número de cédula jurídica de la persona" Title="Cédula Jurídica">
+                                                        <ui:InputDialog.Result>
+                                                          <OutArgument x:TypeArguments="x:String">[idJuridica]</OutArgument>
+                                                        </ui:InputDialog.Result>
+                                                      </ui:InputDialog>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[firstJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(0,1)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[secondJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(1,1)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[thirdJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(2)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula Jurídica'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_33" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[firstJuridica + &quot;[k(tab)]&quot; + secondJuridica + &quot;[k(tab)]&quot; + thirdJuridica]" Version="V3">
+                                                        <uix:NTypeInto.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvElementArea="897, 385, 40, 20" CvType="InputBox" DesignTimeRectangle="899, 386, 36, 17" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'3'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="a123b20d-0513-4972-9fe2-f3e19e520024" InformativeScreenshot="63534aff6d97236d416438f13846f6f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CvTextArea="819, 390, 76, 11" CvTextArgument="Cedula Juridica:" CvType="Text" DesignTimeRectangle="817, 387, 81, 16" ElementType="Text" FriendlyName="'Cédula Jurídica'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Cédula Jurídica:' check:innerText='Cédula Jurídica:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NTypeInto.Target>
+                                                      </uix:NTypeInto>
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_67" />
+                                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="433.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_18" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_68" />
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_73" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvTextArea="1031, 430, 42, 10" CvTextArgument="Consultar" CvType="Text" DesignTimeRectangle="1030, 428, 48, 14" DesignTimeScaleFactor="0.8333333134651184" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' type='' class='' /&gt;" Guid="076db607-d75e-44cb-8a5a-7cefd0fa8e80" InformativeScreenshot="4c25efe69c49af33c81b4630db0f5ffc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_69" />
+                                                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'grecaptcha.ready(functi…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="433.6,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_34" OutImage="[juridicaData]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NTakeScreenshot.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" DesignTimeRectangle="767, 330, 573, 221" DesignTimeScaleFactor="0.8333333134651184" FriendlyName="'grecaptcha.ready(functi…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Consulta de Personas Jurídicas por Identificación&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Permite realizar una consulta por la' /&gt;" Guid="e28a637e-02e1-4749-9a12-2f8c6f95851e" ImageBase64="" InformativeScreenshot="2b0608e98b98b0b7759b28ece8d93922.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                        </uix:NTakeScreenshot.Target>
+                                                      </uix:NTakeScreenshot>
+                                                      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\DetailsJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_32" Image="[juridicaData]" />
+                                                      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,318.4" sap2010:WorkflowViewState.IdRef="InputDialog_22" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                                        <ui:InputDialog.Result>
+                                                          <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                                        </ui:InputDialog.Result>
+                                                      </ui:InputDialog>
+                                                    </Sequence>
+                                                  </ui:InterruptibleWhile.Body>
+                                                </ui:InterruptibleWhile>
+                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="500.8,113.6" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="Proceso completado y finalizado" />
+                                              </Sequence>
                                             </Sequence>
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="483.2,2347.2" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="601.6,5797.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="449.6,2287.2" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="568,5737.6" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:String" Name="moreJuridica" />
+                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_63" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_63" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/bienesMuebles/GoodFurnitureOfPersonDetail.jspx" CvElementArea="573, 516, 16, 16" CvTextArea="594, 512, 107, 13" CvTextArgument="indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="574, 509, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="3fed7cba-d700-4521-94ff-40b63487d61b" InformativeScreenshot="b1fdaca40b540d16c503825b8e346772.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                 </uix:NClick.Target>
                                               </uix:NClick>
-                                              <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_27" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <uix:NSelectItem DisplayName="Private: Select Item 'Registro'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_27" Item="Personas Jurídicas" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NSelectItem.Items>
                                                   <scg:List x:TypeArguments="x:String" Capacity="4">
                                                     <x:String>Bienes Inmuebles</x:String>
@@ -1407,8 +1612,8 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NSelectItem.Target>
                                               </uix:NSelectItem>
-                                              <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_51" />
-                                              <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_28" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_51" />
+                                              <uix:NSelectItem DisplayName="Private: Select Item 'Buscar por'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_28" Item="CEDULA DE IDENTIDAD" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NSelectItem.Items>
                                                   <scg:List x:TypeArguments="x:String" Capacity="42">
                                                     <x:String>Nombre</x:String>
@@ -1465,8 +1670,8 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NSelectItem.Target>
                                               </uix:NSelectItem>
-                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_52" />
-                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
+                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_52" />
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Num. de Identificación'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[currentItem + &quot;[k(enter)]&quot;]" Version="V3">
                                                 <uix:NTypeInto.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="858, 636, 184, 27" CvType="InputBox" DesignTimeRectangle="860, 637, 180, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'901210157'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="9f7f6f34-2021-4083-9a7e-d38370c5cf8b" InformativeScreenshot="75a93ac967ae9c3163c917051d76ad47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
@@ -1477,21 +1682,122 @@
                                                   </uix:TargetAnchorable>
                                                 </uix:NTypeInto.Target>
                                               </uix:NTypeInto>
-                                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_53" />
-                                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-                                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_54" />
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_62" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_53" />
+                                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="534.4,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_54" />
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Private: Click 'IMG'" sap:VirtualizedContainerService.HintSize="534.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_62" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="1048, 717, 74, 24" CvTextArea="1062, 722, 45, 12" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1049, 717, 71, 21" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buscar' tag='IMG' type='' class='' /&gt;" Guid="0f106310-e85d-40dd-b553-f667c7ecae74" InformativeScreenshot="ec5c955d02c03828948cc4c787525be4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                 </uix:NClick.Target>
                                               </uix:NClick>
-                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_55" />
-                                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="416,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_31" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="534.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_55" />
+                                              <uix:NTakeScreenshot DelayBefore="3" DisplayName="Private: Take Screenshot '//&lt;![CDATA[ grecaptcha.…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="534.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_31" OutImage="[juridica]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                                 <uix:NTakeScreenshot.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" DesignTimeRectangle="655, 405, 858, 413" DesignTimeScaleFactor="1.25" FriendlyName="'//&lt;![CDATA[ grecaptcha.…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Índice de Personas Físicas&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Aquí puede realizar búsquedas por nombre en el índice de personas' /&gt;" Guid="dd40c439-16ce-4b14-a7c9-edac5f8623d6" ImageBase64="" InformativeScreenshot="087375f63f0b3c9929cc55bbbe9a7833.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                                 </uix:NTakeScreenshot.Target>
                                               </uix:NTakeScreenshot>
-                                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="SaveImage_29" Image="[juridica]" />
+                                              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\RNJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="534.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_29" Image="[juridica]" />
+                                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_23" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                                <ui:InputDialog.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                                </ui:InputDialog.Result>
+                                              </ui:InputDialog>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="534.4,3114.4" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[moreJuridica.Equals(&quot;SI&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="500.8,2917.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
+                                                  <ui:InterruptibleWhile.Body>
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,2771.2" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                      <Sequence.Variables>
+                                                        <Variable x:TypeArguments="x:String" Name="idJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="firstJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="secondJuridica" />
+                                                        <Variable x:TypeArguments="x:String" Name="thirdJuridica" />
+                                                        <Variable x:TypeArguments="ui:Image" Name="juridicaData" />
+                                                      </Sequence.Variables>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultas Gratuitas'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_74" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/padronFisico.jspx" CvElementArea="583, 431, 17, 16" CvTextArea="604, 431, 89, 10" CvTextArgument="Consultas Gratuitas" CvType="ArrowButton" DesignTimeRectangle="585, 425, 167, 21" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consultas Gratuitas'" FullSelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Consultas Gratuitas    *' tag='A' type='' class='' check:innerText='Consultas Gratuitas' /&gt;" Guid="a04de9f8-6343-4d76-b545-365b6401f2b8" InformativeScreenshot="d1d487ea73e0d7181dd196498cf0581d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consulta por'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_75" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/indiceDocumentos.jspx" CvTextArea="806, 829, 118, 10" CvTextArgument="Consolta por Cedub Junidiea" CvType="Text" DesignTimeRectangle="807, 829, 118, 10" DesignTimeScaleFactor="0.8333333134651184" ElementType="Text" FriendlyName="'Consulta por'" FullSelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consulta por Cédula Jurídica' tag='A' type='' class='' check:innerText='Consulta por Cédula Jurídica' /&gt;" Guid="fa22d69d-0152-4d4e-9e49-c318927a594c" InformativeScreenshot="c2e75d162748bc1aaf7d5fc297f6fb9d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_24" IsPassword="False" Label="Ingrese el número de cédula jurídica de la persona" Title="Cédula Jurídica">
+                                                        <ui:InputDialog.Result>
+                                                          <OutArgument x:TypeArguments="x:String">[idJuridica]</OutArgument>
+                                                        </ui:InputDialog.Result>
+                                                      </ui:InputDialog>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[firstJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(0,1)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[secondJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(1,1)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[thirdJuridica]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String">[idJuridica.Substring(2)]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula Jurídica'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_34" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="[firstJuridica + &quot;[k(tab)]&quot; + secondJuridica + &quot;[k(tab)]&quot; + thirdJuridica]" Version="V3">
+                                                        <uix:NTypeInto.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvElementArea="897, 385, 40, 20" CvType="InputBox" DesignTimeRectangle="899, 386, 36, 17" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'3'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='fila2' aaname='' /&gt;" Guid="a123b20d-0513-4972-9fe2-f3e19e520024" InformativeScreenshot="63534aff6d97236d416438f13846f6f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CvTextArea="819, 390, 76, 11" CvTextArgument="Cedula Juridica:" CvType="Text" DesignTimeRectangle="817, 387, 81, 16" ElementType="Text" FriendlyName="'Cédula Jurídica'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fila2' aaname='Cédula Jurídica:' check:innerText='Cédula Jurídica:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NTypeInto.Target>
+                                                      </uix:NTypeInto>
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_70" />
+                                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="433.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_19" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_71" />
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" CvTextArea="1031, 430, 42, 10" CvTextArgument="Consultar" CvType="Text" DesignTimeRectangle="1030, 428, 48, 14" DesignTimeScaleFactor="0.8333333134651184" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Consultar' tag='IMG' type='' class='' /&gt;" Guid="076db607-d75e-44cb-8a5a-7cefd0fa8e80" InformativeScreenshot="4c25efe69c49af33c81b4630db0f5ffc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_72" />
+                                                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'grecaptcha.ready(functi…'" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="433.6,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_35" OutImage="[juridicaData]" SaveScreenshotTo="Image" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                                                        <uix:NTakeScreenshot.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/consultaDocumentos/paramConsultaJuridicaCedula.jspx" DesignTimeRectangle="767, 330, 573, 221" DesignTimeScaleFactor="0.8333333134651184" FriendlyName="'grecaptcha.ready(functi…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='DIV' aaname='                 ' check:innerText='Consulta de Personas Jurídicas por Identificación&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Permite realizar una consulta por la' /&gt;" Guid="e28a637e-02e1-4749-9a12-2f8c6f95851e" ImageBase64="" InformativeScreenshot="2b0608e98b98b0b7759b28ece8d93922.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                        </uix:NTakeScreenshot.Target>
+                                                      </uix:NTakeScreenshot>
+                                                      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;Capturas\DetailsJuridica_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_33" Image="[juridicaData]" />
+                                                      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,318.4" sap2010:WorkflowViewState.IdRef="InputDialog_25" IsPassword="False" Label="La persona posee Persona Jurídica" OptionsString="SI;NO" Title="Validacion de Personas Jurídicas">
+                                                        <ui:InputDialog.Result>
+                                                          <OutArgument x:TypeArguments="x:String">[moreJuridica]</OutArgument>
+                                                        </ui:InputDialog.Result>
+                                                      </ui:InputDialog>
+                                                    </Sequence>
+                                                  </ui:InterruptibleWhile.Body>
+                                                </ui:InterruptibleWhile>
+                                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="500.8,113.6" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_3" Reason="Proceso completado y finalizado" />
+                                              </Sequence>
                                             </Sequence>
                                           </Sequence>
                                         </If.Else>
