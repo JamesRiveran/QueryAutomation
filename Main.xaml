@@ -99,15 +99,19 @@
       <AssemblyReference>System.Windows.Presentation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="1112,47759.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="1112,49212.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="numberId" />
       <Variable x:TypeArguments="s:String[]" Name="list" />
       <Variable x:TypeArguments="x:String" Name="userOption" />
-      <Variable x:TypeArguments="x:Int32" Name="counterInmuebles" />
+      <Variable x:TypeArguments="x:Int32" Name="counterInmuebles">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:Int32" Name="counterMuebles">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
+          <Literal x:TypeArguments="x:Int32" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="moreInmuebles" />
@@ -132,21 +136,21 @@
         <InArgument x:TypeArguments="s:String[]">[numberId.Split(","c)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1112,47348.8" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[list]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1112,48802.4" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[list]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1078.4,47160" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1078.4,48613.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[currentItem.Length = 9]" sap:VirtualizedContainerService.HintSize="1044.8,47100" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[currentItem.Length = 9]" sap:VirtualizedContainerService.HintSize="1044.8,48553.6" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1011.2,46712.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1011.2,48166.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -157,7 +161,7 @@
                       <OutArgument x:TypeArguments="x:String">[userOption]</OutArgument>
                     </ui:InputDialog.Result>
                   </ui:InputDialog>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[userOption]" sap:VirtualizedContainerService.HintSize="977.6,46325.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[userOption]" sap:VirtualizedContainerService.HintSize="977.6,47779.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                     <Sequence x:Key="TSE" sap:VirtualizedContainerService.HintSize="624,1279.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -247,34 +251,48 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="Hacienda" sap:VirtualizedContainerService.HintSize="483.2,2067.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence x:Key="Hacienda" sap:VirtualizedContainerService.HintSize="601.6,3559.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Consulta de Situación Tributaria" sap:VirtualizedContainerService.HintSize="449.6,2047.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V2" WindowResize="Maximize">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Consulta de Situación Tributaria" sap:VirtualizedContainerService.HintSize="568,3499.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V2" WindowResize="Maximize">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do Hacienda" sap:VirtualizedContainerService.HintSize="416,1807.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence DisplayName="Do Hacienda" sap:VirtualizedContainerService.HintSize="534.4,3259.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="ui:Image" Name="imageHacienda" />
+                                <Variable x:TypeArguments="x:String" Name="moreImageHacienda" />
+                                <Variable x:TypeArguments="x:Int32" Name="counterHacienda">
+                                  <Variable.Default>
+                                    <Literal x:TypeArguments="x:Int32" />
+                                  </Variable.Default>
+                                </Variable>
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_116" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <Assign sap:VirtualizedContainerService.HintSize="500.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_125">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[counterHacienda]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[counterHacienda+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_116" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="1017, 421, 53, 24" CvTextArea="1025, 427, 36, 11" CvTextArgument="Limpiar" CvType="Button" DesignTimeRectangle="1018, 422, 51, 22" DesignTimeScaleFactor="0.625" ElementType="Button" FriendlyName="'Limpiar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' type='button' tag='INPUT' class='boton' aaname='De clic para limpiar' check:text='Limpiar' /&gt;" Guid="780fa83f-32b1-46d1-a4ae-392de1522709" InformativeScreenshot="4242ca3e70e6e0647a2a38f85ea1d0f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_117" />
-                              <uix:NSelectItem DisplayName="Select Item 'Tipo de identificación'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="Cédula persona física" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_117" />
+                              <uix:NSelectItem DisplayName="Select Item 'Tipo de identificación'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="Cédula persona física" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NSelectItem.Items>
                                   <scg:List x:TypeArguments="x:String" Capacity="5">
                                     <x:String>Seleccione</x:String>
@@ -294,7 +312,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NSelectItem.Target>
                               </uix:NSelectItem>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Text="[currentItem]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="500.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Text="[currentItem]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="838, 481, 370, 29" CvType="InputBox" DesignTimeRectangle="838, 482, 370, 25" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'_-____-____'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='' aaname='Nº Identificación:' /&gt;" Guid="d8d0da0b-cb0e-4080-afa9-3bba04336431" InformativeScreenshot="a9487f2077b1accc1aa81dfb24382f6b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -305,24 +323,50 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Presione el botón de No soy robot y completada la verificación presione Aceptar&quot;]" />
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultar'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="500.8,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Presione el botón de No soy robot y completada la verificación presione Aceptar&quot;]" />
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultar'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="835, 722, 84, 32" CvTextArea="847, 730, 60, 12" CvTextArgument="Consultar" CvType="Button" DesignTimeRectangle="838, 723, 80, 29" DesignTimeScaleFactor="0.8333333134651184" ElementType="Button" FriendlyName="'Consultar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='boton' aaname='De clic para consultar' check:text='Consultar' /&gt;" Guid="e1b44784-67f2-41c2-9b3c-24f7921a5ec9" InformativeScreenshot="6b707e2918b5bb45bec52eaa98d08fa1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_13" />
-                              <uix:NTakeScreenshot DisplayName="Private: Take Screenshot Hacienda" FileNameMode="None" sap:VirtualizedContainerService.HintSize="382.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_11" OutImage="[imageHacienda]" SaveScreenshotTo="Image" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1">
-                                <uix:NTakeScreenshot.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" DesignTimeRectangle="593, 258, 731, 676" DesignTimeScaleFactor="0.625" FriendlyName="'Es una'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div' idx='6' parentid='frmFormulario' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' parentid='frmFormulario' tag='DIV' check:innerText='Es una consulta de acceso público mediante la cual se podrá verificar la situación tributaria &amp;#xD;&amp;#xA;de' /&gt;" Guid="aadd0951-1a43-40e4-8b21-c7469106988c" ImageBase64="" InformativeScreenshot="09294dac05087556caec889654ec20db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                                </uix:NTakeScreenshot.Target>
-                              </uix:NTakeScreenshot>
-                              <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_10" Image="[imageHacienda]" />
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="382.4,182.4" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="910, 407, 53, 24" CvTextArea="920, 414, 35, 11" CvTextArgument="Limpiar" CvType="Button" DesignTimeRectangle="912, 408, 51, 22" DesignTimeScaleFactor="0.625" ElementType="Button" FriendlyName="'Limpiar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' type='button' tag='INPUT' class='boton' aaname='De clic para limpiar' check:text='Limpiar' /&gt;" Guid="bcc48323-f9b3-4caa-93d3-109119916965" InformativeScreenshot="549c9f37d56293fe770c16e3bc0b9ea7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
+                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_13" />
+                              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="500.8,221.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_102" OutImage="[imageHacienda]" SaveScreenshotTo="Image" Version="V3" />
+                              <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;(&quot;+counterHacienda.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="500.8,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_10" Image="[imageHacienda]" />
+                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="500.8,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_110" IsPassword="False" Label="¿Desea hacer scroll y tomar otra captura?" OptionsString="SI;NO" Title="Captura de pantalla Hacienda">
+                                <ui:InputDialog.Result>
+                                  <OutArgument x:TypeArguments="x:String">[moreImageHacienda]</OutArgument>
+                                </ui:InputDialog.Result>
+                              </ui:InputDialog>
+                              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="500.8,1188" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_33">
+                                <ui:InterruptibleWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,1048.8" sap2010:WorkflowViewState.IdRef="Sequence_217">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_16" InteractionMode="HardwareEvents" MovementUnits="6" Version="V3" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_126">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[counterHacienda]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[counterHacienda+1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="433.6,221.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_103" OutImage="[imageHacienda]" SaveScreenshotTo="Image" Version="V3" />
+                                    <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;(&quot;+counterHacienda.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_93" Image="[imageHacienda]" />
+                                    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,318.4" sap2010:WorkflowViewState.IdRef="InputDialog_112" IsPassword="False" Label="¿Desea hacer scroll y tomar otra captura?" OptionsString="SI;NO" Title="Captura de pantalla Hacienda">
+                                      <ui:InputDialog.Result>
+                                        <OutArgument x:TypeArguments="x:String">[moreImageHacienda]</OutArgument>
+                                      </ui:InputDialog.Result>
+                                    </ui:InputDialog>
+                                  </Sequence>
+                                </ui:InterruptibleWhile.Body>
+                                <ui:InterruptibleWhile.Condition>
+                                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="moreImageHacienda.Equals(&quot;SI&quot;)" />
+                                </ui:InterruptibleWhile.Condition>
+                              </ui:InterruptibleWhile>
                             </Sequence>
                           </ActivityAction>
                         </uix:NApplicationCard.Body>
@@ -331,7 +375,7 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="CCSS" sap:VirtualizedContainerService.HintSize="483.2,1849.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence x:Key="CCSS" sap:VirtualizedContainerService.HintSize="483.2,1889.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -419,19 +463,19 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="Registro Nacional" sap:VirtualizedContainerService.HintSize="1044.8,42005.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <Sequence x:Key="Registro Nacional" sap:VirtualizedContainerService.HintSize="1011.2,25175.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sistema de Certificaciones e Informes Digitales del Registro Nacional" sap:VirtualizedContainerService.HintSize="1011.2,41945.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V2" WindowResize="Maximize">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sistema de Certificaciones e Informes Digitales del Registro Nacional" sap:VirtualizedContainerService.HintSize="977.6,25115.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V2" WindowResize="Maximize">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do Registro Nacional" sap:VirtualizedContainerService.HintSize="977.6,41705.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="Do Registro Nacional" sap:VirtualizedContainerService.HintSize="944,24875.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="ui:Image" Name="juridica" />
                                 <Variable x:TypeArguments="ui:Image" Name="muebles" />
@@ -444,7 +488,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="944,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="jamesriveranu@gmail.com" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="910.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="jamesriveranu@gmail.com" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvElementArea="418, 579, 177, 22" CvType="InputBox" DesignTimeRectangle="419, 580, 175, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='inputbox' aaname='' /&gt;" Guid="bd5daa4b-8d3e-4cfc-9c0f-b7500dc6d99f" InformativeScreenshot="e531e0b3ffd2ee47fcb35ac7502dfd96.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -455,7 +499,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="944,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="james2003" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="910.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Text="james2003" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvElementArea="416, 627, 178, 23" CvType="InputBox" DesignTimeRectangle="419, 629, 175, 20" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT jide6b309:pass'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='inputbox' aaname='' /&gt;" Guid="ec96aaa2-8dc8-4342-8e67-82a7d62c2733" InformativeScreenshot="e53aeb01cc4a717fdfd8b388caf03471.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -466,23 +510,23 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" sap:VirtualizedContainerService.HintSize="944,189.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" sap:VirtualizedContainerService.HintSize="910.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx;jsessionid=YtfI5icWXq8T1YoPt9ccw0_gL7XrCUC5ol4WuVTq5fQ0Kxb4v_8I!-552275117" CvTextArea="477, 652, 55, 16" CvTextArgument="Ingresar" CvType="Text" DesignTimeRectangle="478, 648, 56, 21" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Ingresar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='' aaname='Ingresar' check:text='Ingresar' /&gt;" Guid="869ae425-f249-41bf-ac01-1b246401b414" InformativeScreenshot="39082b6708e704f55d4705f0f017ac17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="944,189.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Índice Personas Físicas'" sap:VirtualizedContainerService.HintSize="910.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://www.rnpdigital.com/shopping/login.jspx" CvElementArea="380, 588, 23, 21" CvTextArea="411, 584, 159, 16" CvTextArgument="Indice Personas Fisicas" CvType="ArrowButton" DesignTimeRectangle="381, 578, 250, 31" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Índice Personas Físicas'" FullSelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                         Índice Personas Físicas' tag='A' type='' class='' check:innerText='Índice Personas Físicas' /&gt;" Guid="f63af49f-26ef-4dd9-a574-38f36ae15f14" InformativeScreenshot="221a871de80b5c30350d3c8b723ee22c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sistema de Certificaciones e Informes Digitales del Registro Nacional' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="944,122.4" sap2010:WorkflowViewState.IdRef="Delay_14" />
-                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="944,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_57" IsPassword="False" Label="Seleccione el proceso que desea realizar" OptionsString="Bienes Inmuebles;Bienes Muebles;Persona Jurídica;Proceso Completo" Title="Elección de proceso">
+                              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="910.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="910.4,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_57" IsPassword="False" Label="Seleccione el proceso que desea realizar" OptionsString="Bienes Inmuebles;Bienes Muebles;Persona Jurídica;Proceso Completo" Title="Elección de proceso">
                                 <ui:InputDialog.Result>
                                   <OutArgument x:TypeArguments="x:String">[processSelection]</OutArgument>
                                 </ui:InputDialog.Result>
                               </ui:InputDialog>
-                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[processSelection]" sap:VirtualizedContainerService.HintSize="944,23484" sap2010:WorkflowViewState.IdRef="Switch`1_8">
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[processSelection]" sap:VirtualizedContainerService.HintSize="910.4,23484" sap2010:WorkflowViewState.IdRef="Switch`1_8">
                                 <Sequence x:Key="Bienes Inmuebles" sap:VirtualizedContainerService.HintSize="769.6,7177.6" sap2010:WorkflowViewState.IdRef="Sequence_126">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2859,7 +2903,7 @@
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                     </Sequence>
-                    <Sequence x:Key="Proceso Completo" sap:VirtualizedContainerService.HintSize="937.6,46022.4" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                    <Sequence x:Key="Proceso Completo" sap:VirtualizedContainerService.HintSize="937.6,47476" sap2010:WorkflowViewState.IdRef="Sequence_30">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3028,28 +3072,38 @@
                           <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="5e3de2e311887d4b8b11495910bd9e12.jpg" Selector="&lt;html app='chrome.exe' title='Registro de Facturas por Servicios Médicos' /&gt;" Title="Registro de Facturas por Servicios Médicos" Url="https://sfa.ccss.sa.cr/servMedicos/validarDerechos.do" />
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Portal Contribuyente" sap:VirtualizedContainerService.HintSize="904,2056" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V2" WindowResize="Maximize">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Consulta de Situación Tributaria" sap:VirtualizedContainerService.HintSize="904,3509.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V2" WindowResize="Maximize">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do Hacienda" sap:VirtualizedContainerService.HintSize="416,1807.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence DisplayName="Do Hacienda" sap:VirtualizedContainerService.HintSize="534.4,3260.8" sap2010:WorkflowViewState.IdRef="Sequence_242">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="ui:Image" Name="imageHacienda" />
+                                <Variable x:TypeArguments="x:String" Name="moreImageHacienda" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="counterHacienda" />
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_117" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <Assign sap:VirtualizedContainerService.HintSize="500.8,114.4" sap2010:WorkflowViewState.IdRef="Assign_127">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[counterHacienda]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[counterHacienda+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_197" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="1017, 421, 53, 24" CvTextArea="1025, 427, 36, 11" CvTextArgument="Limpiar" CvType="Button" DesignTimeRectangle="1018, 422, 51, 22" DesignTimeScaleFactor="0.625" ElementType="Button" FriendlyName="'Limpiar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' type='button' tag='INPUT' class='boton' aaname='De clic para limpiar' check:text='Limpiar' /&gt;" Guid="9f59ad10-2499-406e-9ffc-a2643abff139" InformativeScreenshot="4242ca3e70e6e0647a2a38f85ea1d0f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="1017, 421, 53, 24" CvTextArea="1025, 427, 36, 11" CvTextArgument="Limpiar" CvType="Button" DesignTimeRectangle="1018, 422, 51, 22" DesignTimeScaleFactor="0.625" ElementType="Button" FriendlyName="'Limpiar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' type='button' tag='INPUT' class='boton' aaname='De clic para limpiar' check:text='Limpiar' /&gt;" Guid="780fa83f-32b1-46d1-a4ae-392de1522709" InformativeScreenshot="4242ca3e70e6e0647a2a38f85ea1d0f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_118" />
-                              <uix:NSelectItem DisplayName="Select Item 'Tipo de identificación'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Cédula persona física" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_218" />
+                              <uix:NSelectItem DisplayName="Select Item 'Tipo de identificación'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_81" Item="Cédula persona física" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NSelectItem.Items>
                                   <scg:List x:TypeArguments="x:String" Capacity="5">
                                     <x:String>Seleccione</x:String>
@@ -3060,7 +3114,7 @@
                                   </scg:List>
                                 </uix:NSelectItem.Items>
                                 <uix:NSelectItem.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvTextArea="865, 385, 43, 10" CvTextArgument="Seleccione" CvType="Text" DesignTimeRectangle="860, 381, 275, 19" DesignTimeScaleFactor="0.625" ElementType="DropDown" FriendlyName="'Seleccione'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='' aaname='Tipo de identificación:' /&gt;" Guid="27eaf603-a54f-4581-9c0e-b6b31d31c5f5" InformativeScreenshot="8ad94ec96ead1ebf0b76ebacbad23caf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvTextArea="865, 385, 43, 10" CvTextArgument="Seleccione" CvType="Text" DesignTimeRectangle="860, 381, 275, 19" DesignTimeScaleFactor="0.625" ElementType="DropDown" FriendlyName="'Seleccione'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='' aaname='Tipo de identificación:' /&gt;" Guid="e24aeca0-eea8-4146-9d98-acbd5b698121" InformativeScreenshot="dd037ac602fb2167fb7737adb68e2b89.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
                                       <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CvTextArea="771, 386, 84, 12" CvTextArgument="Tipo de identificacion" CvType="Text" DesignTimeRectangle="773, 388, 84, 10" ElementType="Text" FriendlyName="'Tipo de identificación'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Tipo de identificación:' check:innerText='Tipo de identificación:' /&gt;" SearchSteps="FuzzySelector, CV" />
@@ -3069,7 +3123,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NSelectItem.Target>
                               </uix:NSelectItem>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Text="[currentItem]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Cédula'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="500.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_84" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Text="[currentItem]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="838, 481, 370, 29" CvType="InputBox" DesignTimeRectangle="838, 482, 370, 25" DesignTimeScaleFactor="0.8333333134651184" ElementType="InputBox" FriendlyName="'_-____-____'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='' aaname='Nº Identificación:' /&gt;" Guid="d8d0da0b-cb0e-4080-afa9-3bba04336431" InformativeScreenshot="a9487f2077b1accc1aa81dfb24382f6b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -3080,29 +3134,52 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Presione el botón de No soy robot y completada la verificación presione Aceptar&quot;]" />
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultar'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="500.8,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_35" Text="[&quot;Presione el botón de No soy robot y completada la verificación presione Aceptar&quot;]" />
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultar'" sap:VirtualizedContainerService.HintSize="500.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_198" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="835, 722, 84, 32" CvTextArea="847, 730, 60, 12" CvTextArgument="Consultar" CvType="Button" DesignTimeRectangle="838, 723, 80, 29" DesignTimeScaleFactor="0.8333333134651184" ElementType="Button" FriendlyName="'Consultar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='boton' aaname='De clic para consultar' check:text='Consultar' /&gt;" Guid="e1b44784-67f2-41c2-9b3c-24f7921a5ec9" InformativeScreenshot="6b707e2918b5bb45bec52eaa98d08fa1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                              <uix:NTakeScreenshot DisplayName="Private: Take Screenshot Hacienda" FileNameMode="None" sap:VirtualizedContainerService.HintSize="382.4,215.2" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" OutImage="[imageHacienda]" SaveScreenshotTo="Image" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1">
-                                <uix:NTakeScreenshot.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" DesignTimeRectangle="593, 258, 731, 676" DesignTimeScaleFactor="0.625" FriendlyName="'Es una'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div' idx='6' parentid='frmFormulario' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' parentid='frmFormulario' tag='DIV' check:innerText='Es una consulta de acceso público mediante la cual se podrá verificar la situación tributaria &amp;#xD;&amp;#xA;de' /&gt;" Guid="aadd0951-1a43-40e4-8b21-c7469106988c" ImageBase64="" InformativeScreenshot="09294dac05087556caec889654ec20db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                                </uix:NTakeScreenshot.Target>
-                              </uix:NTakeScreenshot>
-                              <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[imageHacienda]" />
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" sap:VirtualizedContainerService.HintSize="382.4,182.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5df2c9a1-f5c7-4d15-a528-2cb9a8b538a1" Version="V3">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" CvElementArea="910, 407, 53, 24" CvTextArea="920, 414, 35, 11" CvTextArgument="Limpiar" CvType="Button" DesignTimeRectangle="912, 408, 51, 22" DesignTimeScaleFactor="0.625" ElementType="Button" FriendlyName="'Limpiar'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$btnLimpiar' type='button' tag='INPUT' class='boton' aaname='De clic para limpiar' check:text='Limpiar' /&gt;" Guid="bcc48323-f9b3-4caa-93d3-109119916965" InformativeScreenshot="549c9f37d56293fe770c16e3bc0b9ea7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
+                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="500.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_219" />
+                              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="500.8,221.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_104" OutImage="[imageHacienda]" SaveScreenshotTo="Image" Version="V3" />
+                              <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;(&quot;+counterHacienda.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="500.8,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_94" Image="[imageHacienda]" />
+                              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="500.8,327.2" sap2010:WorkflowViewState.IdRef="InputDialog_113" IsPassword="False" Label="¿Desea hacer scroll y tomar otra captura?" OptionsString="SI;NO" Title="Captura de pantalla Hacienda">
+                                <ui:InputDialog.Result>
+                                  <OutArgument x:TypeArguments="x:String">[moreImageHacienda]</OutArgument>
+                                </ui:InputDialog.Result>
+                              </ui:InputDialog>
+                              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[moreImageHacienda.Equals(&quot;SI&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="500.8,1188" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_34">
+                                <ui:InterruptibleWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,1048.8" sap2010:WorkflowViewState.IdRef="Sequence_243">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_17" InteractionMode="HardwareEvents" MovementUnits="6" Version="V3" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_128">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[counterHacienda]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[counterHacienda+1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="433.6,221.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_105" OutImage="[imageHacienda]" SaveScreenshotTo="Image" Version="V3" />
+                                    <ui:SaveImage DisplayName="Save Image Hacienda" FileName="[&quot;Capturas/Hacienda_&quot;+currentItem+&quot;(&quot;+counterHacienda.ToString+&quot;)&quot;+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_95" Image="[imageHacienda]" />
+                                    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,318.4" sap2010:WorkflowViewState.IdRef="InputDialog_114" IsPassword="False" Label="¿Desea hacer scroll y tomar otra captura?" OptionsString="SI;NO" Title="Captura de pantalla Hacienda">
+                                      <ui:InputDialog.Result>
+                                        <OutArgument x:TypeArguments="x:String">[moreImageHacienda]</OutArgument>
+                                      </ui:InputDialog.Result>
+                                    </ui:InputDialog>
+                                  </Sequence>
+                                </ui:InterruptibleWhile.Body>
+                              </ui:InterruptibleWhile>
                             </Sequence>
                           </ActivityAction>
                         </uix:NApplicationCard.Body>
                         <uix:NApplicationCard.TargetApp>
-                          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACDUlEQVRoQ+3Vv0tWURgHcKFoiqjIA0G4NAsGDqnklIGTS04iCC21pyBCCJJw/oAopK2tsS0XSZ2SHIIgapGWlGpxUlBu33Puc7r3PX7vjxfBfOA88HH43u89vs/7vty3J8sy1WioCQ01oaEmNNSEhprQUBMaakJDTWioSf7nLMbYAchqDEiz9aQFupq0wMlJC3Q1xvbCAryEL/CfFjD2FtyDcRiBG3KFj7GXoR/GwN3XJ/ldWAe+gLHXYRDcfUNwTa78m2IBY3cqbPqmsRfgCXyD8rsWfIBB3w2Tv+h3cARx/ytMgzv3lWT5AsY+hI+SlR3DKtzxPUx5gbgcuCWuwlopq3IAY/5kYx/BoeR13Iu/CJswDG+B9crc/5lou8AefIqyOr9hOcqaTMEo/ChlTfbBtFngLGzLp/Y9ypssnJcFHAOvo6zJRjcL/IIleAqfJWvyHmbhTSmrch/m4Cc8h3nYAtYN/rRdwH3fbvuP2Y2xV6Dp+/pC2vkY+yy6HpuEB9Ard7h7LkHtm9V2gRU5spji0VflpjTzyX87WC+YkWbn5D98rO+1XeCxHFdM/ZNmV1rF5M971g2qFpiJeh3aLnDycGMXo07ZjrQ6h3eDtAAtiLSAH94N0gK0INICfng3SAvQgkgL+OHd4HQLaEZDTWioCQ01oaEmNNSEhprQUBMaakJDTWioCQ31yHr+AhDSbNkhzuDrAAAAAElFTkSuQmCC" InformativeScreenshot="bf8ca4d9407f0c6113ec377a118621f4.jpg" Selector="&lt;html app='chrome.exe' title='Portal Contribuyente' /&gt;" Title="Portal Contribuyente" Url="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" />
+                          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACDUlEQVRoQ+3Vv0tWURgHcKFoiqjIA0G4NAsGDqnklIGTS04iCC21pyBCCJJw/oAopK2tsS0XSZ2SHIIgapGWlGpxUlBu33Puc7r3PX7vjxfBfOA88HH43u89vs/7vty3J8sy1WioCQ01oaEmNNSEhprQUBMaakJDTWioSf7nLMbYAchqDEiz9aQFupq0wMlJC3Q1xvbCAryEL/CfFjD2FtyDcRiBG3KFj7GXoR/GwN3XJ/ldWAe+gLHXYRDcfUNwTa78m2IBY3cqbPqmsRfgCXyD8rsWfIBB3w2Tv+h3cARx/ytMgzv3lWT5AsY+hI+SlR3DKtzxPUx5gbgcuCWuwlopq3IAY/5kYx/BoeR13Iu/CJswDG+B9crc/5lou8AefIqyOr9hOcqaTMEo/ChlTfbBtFngLGzLp/Y9ypssnJcFHAOvo6zJRjcL/IIleAqfJWvyHmbhTSmrch/m4Cc8h3nYAtYN/rRdwH3fbvuP2Y2xV6Dp+/pC2vkY+yy6HpuEB9Ard7h7LkHtm9V2gRU5spji0VflpjTzyX87WC+YkWbn5D98rO+1XeCxHFdM/ZNmV1rF5M971g2qFpiJeh3aLnDycGMXo07ZjrQ6h3eDtAAtiLSAH94N0gK0INICfng3SAvQgkgL+OHd4HQLaEZDTWioCQ01oaEmNNSEhprQUBMaakJDTWioCQ31yHr+AhDSbNkhzuDrAAAAAElFTkSuQmCC" InformativeScreenshot="b996691d1f6aa047af9091253ef4be98.jpg" Selector="&lt;html app='chrome.exe' title='Consulta de Situación Tributaria' /&gt;" Title="Portal Contribuyente" Url="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" />
                         </uix:NApplicationCard.TargetApp>
                       </uix:NApplicationCard>
                       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sistema de Certificaciones e Informes Digitales del Registro Nacional" sap:VirtualizedContainerService.HintSize="904,40800" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="5852df05-6698-4a2a-b0d3-593ee539d34f" Version="V2" WindowResize="Maximize">
